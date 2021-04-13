@@ -18,6 +18,7 @@ exports.notifyNewMessage = functions.firestore
           sender: message.sender,
           body: message.body,
           timerInMillis: message.timerInMillis,
+          timestamp: message.timestamp,
         },
       };
       const response = app.messaging().sendToTopic(topic, payload);
